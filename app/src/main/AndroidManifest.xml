@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.stifler.timeconsumeplugin">
+    package="com.stifler.app">
 
     <application
         android:allowBackup="true"
