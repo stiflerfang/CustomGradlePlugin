@@ -1,5 +1,6 @@
 apply plugin: 'groovy'
 apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'maven'
 group='com.github.stiflerfang'
 
 dependencies {
@@ -11,4 +12,20 @@ dependencies {
 repositories {
     jcenter()
 }
+
+//group='com.github.stiflerfang'
+//version='0.0.4'
+//
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //提交到远程服务器：
+//            // repository(url: "http://www.xxx.com/repos") {
+//            //    authentication(userName: "admin", password: "admin")
+//            // }
+//            //本地的Maven地址设置为D:/repos
+//            repository(url: uri('/Users/stifler/Desktop'))
+//        }
+//    }
+//}
 
