@@ -1,2 +1,2 @@
-include ':TimeConsumePlugin', ':app'
+include ':TimeConsumePlugin', ':app', ':helper'
 rootProject.name='CustomGradlePlugin'
