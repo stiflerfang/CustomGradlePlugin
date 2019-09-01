@@ -1,4 +1,4 @@
-package com.stifler.timeconsume;
+package com.stifler.plugin;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassVisitor;
@@ -41,7 +41,7 @@ public class TimeConsumeClassVisitor extends ClassVisitor {
 
           mv.visitLdcInsn(name);
           mv.visitMethodInsn(INVOKESTATIC, "java/lang/System", "nanoTime", "()J", false);
-          mv.visitMethodInsn(INVOKESTATIC, "com/stifler/timeconsumeplugin/TimeCache", "setStartTime",
+          mv.visitMethodInsn(INVOKESTATIC, "com/stifler/plugin/TimeCache", "setStartTime",
               "(Ljava/lang/String;J)V", false);
         }
       }
@@ -51,12 +51,12 @@ public class TimeConsumeClassVisitor extends ClassVisitor {
         if (inject) {
           mv.visitLdcInsn(name);
           mv.visitMethodInsn(INVOKESTATIC, "java/lang/System", "nanoTime", "()J", false);
-          mv.visitMethodInsn(INVOKESTATIC, "com/stifler/timeconsumeplugin/TimeCache", "setEndTime",
+          mv.visitMethodInsn(INVOKESTATIC, "com/stifler/plugin/TimeCache", "setEndTime",
               "(Ljava/lang/String;J)V", false);
 
           mv.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
           mv.visitLdcInsn(name);
-          mv.visitMethodInsn(INVOKESTATIC, "com/stifler/timeconsumeplugin/TimeCache", "getCostTime",
+          mv.visitMethodInsn(INVOKESTATIC, "com/stifler/plugin/TimeCache", "getCostTime",
               "(Ljava/lang/String;)Ljava/lang/String;", false);
           mv.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println",
               "(Ljava/lang/String;)V", false);

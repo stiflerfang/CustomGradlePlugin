@@ -1,4 +1,4 @@
-package com.stifler.timeconsume
+package com.stifler.plugin
 
 import com.android.build.api.transform.*
 import com.android.build.gradle.AppExtension

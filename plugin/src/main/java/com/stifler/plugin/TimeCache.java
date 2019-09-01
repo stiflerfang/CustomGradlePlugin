@@ -1,4 +1,4 @@
-package com.stifler.timeconsume;
+package com.stifler.plugin;
 
 import java.util.HashMap;
 import java.util.Map;
