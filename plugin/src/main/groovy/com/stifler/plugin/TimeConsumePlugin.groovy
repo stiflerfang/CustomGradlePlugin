@@ -12,9 +12,12 @@ import org.objectweb.asm.ClassVisitor
 import org.objectweb.asm.ClassWriter
 
 public class TimeConsumePlugin extends Transform implements Plugin<Project> {
+
     @Override
     public void apply(Project project) {
-
+        println '========================'
+        println 'hello gradle plugin!'
+        println '========================'
         def android = project.extensions.getByType(AppExtension)
         android.registerTransform(this)
     }
