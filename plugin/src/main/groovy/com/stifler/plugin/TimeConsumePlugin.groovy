@@ -69,9 +69,9 @@ public class TimeConsumePlugin extends Transform implements Plugin<Project> {
                             cr.accept(cv, ClassReader.EXPAND_FRAMES)
 
                             byte[] code = cw.toByteArray()
-
-                            FileOutputStream fos = new FileOutputStream(
-                                    file.parentFile.absolutePath + File.separator + name)
+                            File destFile = new File(file.parentFile.absolutePath + File.separator + name)
+                            println '==== 重新写入的位置->lastFilePath === ' + destFile.getAbsolutePath()
+                            FileOutputStream fos = new FileOutputStream(destFile)
                             fos.write(code)
                             fos.close()
                         }
